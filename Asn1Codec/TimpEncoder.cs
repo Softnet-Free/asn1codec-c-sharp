@@ -47,8 +47,7 @@ namespace Softnet.Asn
 
         public int EstimateSize()
         {
-            int V_length = m_ElementEncoder.EstimateSize();
-            return 1 + LengthEncoder.EstimateSize(V_length) + V_length;
+            return m_ElementEncoder.EstimateSize();
         }
 
         public int EncodeTLV(BinaryStack binStack)
