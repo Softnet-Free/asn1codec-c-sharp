@@ -1,93 +1,13 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{EF3F09FD-67EB-4559-98BC-2C3E5D6409C7}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Softnet.Asn</RootNamespace>
-    <AssemblyName>Asn1Codec</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
+
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
+    <Folder Include="Exceptions\" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="ASNDecoder.cs" />
-    <Compile Include="AsnEncoding.cs" />
-    <Compile Include="BMPStringDecoder.cs" />
-    <Compile Include="Exceptions\RestrictionAsnException.cs" />
-    <Compile Include="GndTimeDecoder.cs" />
-    <Compile Include="Exceptions\AsnException.cs" />
-    <Compile Include="Exceptions\EndNotReachedAsnException.cs" />
-    <Compile Include="Exceptions\EndOfContainerAsnException.cs" />
-    <Compile Include="Exceptions\FormatAsnException.cs" />
-    <Compile Include="BinaryStack.cs" />
-    <Compile Include="BMPStringEncoder.cs" />
-    <Compile Include="BooleanEncoder.cs" />
-    <Compile Include="ASNEncoder.cs" />
-    <Compile Include="GndTimeEncoder.cs" />
-    <Compile Include="Exceptions\TypeMismatchAsnException.cs" />
-    <Compile Include="IA5StringDecoder.cs" />
-    <Compile Include="IA5StringEncoder.cs" />
-    <Compile Include="ElementEncoder.cs" />
-    <Compile Include="Int32Decoder.cs" />
-    <Compile Include="Int32Encoder.cs" />
-    <Compile Include="Int64Decoder.cs" />
-    <Compile Include="Int64Encoder.cs" />
-    <Compile Include="LengthDecoder.cs" />
-    <Compile Include="LengthEncoder.cs" />
-    <Compile Include="NullEncoder.cs" />
-    <Compile Include="OctetStringEncoder.cs" />
-    <Compile Include="Exceptions\OverflowAsnException.cs" />
-    <Compile Include="PrintableStringDecoder.cs" />
-    <Compile Include="PrintableStringEncoder.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SequenceDecoder.cs" />
-    <Compile Include="SequenceDecoderImp.cs" />
-    <Compile Include="SequenceEncoder.cs" />
-    <Compile Include="SequenceEncoderImp.cs" />
-    <Compile Include="TagClass.cs" />
-    <Compile Include="TimpEncoder.cs" />
-    <Compile Include="Exceptions\UnderflowAsnException.cs" />
-    <Compile Include="UniversalTag.cs" />
-    <Compile Include="UTF8StringDecoder.cs" />
-    <Compile Include="UTF8StringEncoder.cs" />
-    <Compile Include="UType.cs" />
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+
 </Project>
